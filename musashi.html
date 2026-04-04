@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musashi x Sheena Ringo | Bio</title>
+    
+
+
+
+    <style>
+        
+        :root {
+            --bg: #f4f1ea; 
+            --text: #1a1a1a;
+            --accent: #bc002d; 
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* TEXTURA DE PAPEL CORRIGIDA */
+        .noise {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url('musashi.jpg');
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        header {
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(244, 241, 234, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .side-title {
+            writing-mode: vertical-rl;
+            font-family: 'Sawarabi Mincho', serif;
+            font-size: 1.5rem;
+            border-right: 2px solid var(--accent);
+            padding-right: 10px;
+        }
+
+        nav ul { display: flex; list-style: none; gap: 40px; }
+        nav a { text-decoration: none; color: var(--text); font-weight: bold; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; }
+
+        #audio-control {
+            background: var(--text);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Playfair Display';
+            transition: 0.3s;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            min-height: 90vh;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 7rem);
+            line-height: 0.9;
+            text-transform: uppercase;
+        }
+
+        h1 span {
+            color: transparent;
+            -webkit-text-stroke: 1px var(--text);
+        }
+
+        .hero-img img {
+            width: 100%;
+            filter: grayscale(1) contrast(1.2);
+            box-shadow: 20px 20px 0px var(--accent);
+            transition: 0.5s ease;
+        }
+        
+        .hero-img img:hover {
+            filter: grayscale(0) contrast(1);
+            transform: scale(1.02);
+        }
+
+        .biography {
+            padding: 100px 10%;
+            background: var(--text);
+            color: var(--bg);
+            position: relative;
+            z-index: 20;
+        }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .kanji-detail {
+            font-family: 'Sawarabi Mincho';
+            font-size: 5rem;
+            color: var(--accent);
+            opacity: 0.3;
+            margin-top: 20px;
+        }
+
+        .italic { font-style: italic; font-family: 'Playfair Display'; margin-top: 20px; opacity: 0.8; }
+
+        @media (max-width: 768px) {
+            .hero, .bio-grid { grid-template-columns: 1fr; }
+            header { flex-direction: column; gap: 20px; }
+        }
+        @keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+h1:hover {
+    animation: glitch 0.3s linear infinite;
+    color: var(--accent);
+    -webkit-text-stroke: 1px var(--accent);
+}
+.text-block p:hover {
+    color: var(--accent);
+    transition: 0.3s;
+    cursor: default;
+}
+
+    </style>
+</head>
+
+<body>
+    <footer style="text-align: center; padding: 50px; opacity: 0.5; font-family: 'Sawarabi Mincho';">
+    <p>天 下 無 双 — Invencível sob o Sol</p>
+</footer>
+
+    <div class="noise"></div>
+
+    <header>
+        <div class="side-title">宮本 武蔵</div>
+        <nav>
+            <ul>
+                <li><a href="#intro">Shinmen</a></li>
+                <li><a href="#bio">História</a></li>
+            </ul>
+        </nav>
+        <button id="audio-control">TOCAR: SHEENA RINGO</button>
+    </header>
+
+    <main>
+        <section id="intro" class="hero">
+            <div class="hero-content">
+                <h1>Miyamoto<br><span>Musashi</span></h1>
+                <p class="subtitle italic">"Não há nada fora de si mesmo que possa permitir que você se torne melhor, mais forte ou mais rico."</p>
+            </div>
+            <div class="hero-img">
+                <!-- LINK DE IMAGEM REAL DO MUSASHI -->
+                <img src="musashi.jpg" alt="Musashi Vagabond">
+            </div>
+        </section>
+
+        <section id="bio" class="biography">
+            <div class="bio-grid">
+                <div class="text-block">
+                    <h2>O Caminho da Espada</h2>
+                    <p>Miyamoto Musashi não foi apenas um espadachim, mas um filósofo que buscou a perfeição através do isolamento e da disciplina. Em sua jornada retratada em <i>Vagabond</i>, vemos a transição do jovem violento Takezo para o iluminado Musashi.</p>
+                    <p class="kanji-detail">空</p>
+                </div>
+                <div class="text-block">
+                    <h2>A Estética do Vazio</h2>
+                    <p>A união entre o traço de <strong>Takehiko Inoue</strong> e a sonoridade experimental de <strong>Sheena Ringo</strong> traduz o sentimento de melancolia e poder. É o que a internet chama de <i>Hopecore</i>: encontrar beleza no caos.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- LINK DE ÁUDIO REAL (SHEENA RINGO STYLE) -->
+    <audio id="bg-msc" loop>
+        <source src="https://myinstants.com/media/sounds/shisou-no-toki-rakugo-audio.mp3
+" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const audio = document.getElementById('bg-msc');
+        const btn = document.getElementById('audio-control');
+
+        btn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play().catch(e => console.log("Erro ao tocar: ", e));
+                btn.innerHTML = "PAUSAR: SHEENA RINGO";
+                btn.style.background = "#bc002d";
+            } else {
+                audio.pause();
+                btn.innerHTML = "TOCAR: SHEENA RINGO";
+                btn.style.background = "#1a1a1a";
+            }
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.text-block').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(50px)";
+            el.style.transition = "all 1s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
